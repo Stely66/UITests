@@ -6,7 +6,7 @@ describe('angularjs homepage todo list', function() {
 	browser.driver.findElement(by.id('page_x002e_components_x002e_slingshot-login_x0023_default-submit-button')).click();
 
        browser.driver.getCurrentUrl().then(function(url) {
-          expect(url).toEqual("http://127.0.0.1:8080/share/page/user/admin/dashboard");
+          expect(url).toEqual("http://192.168.96.20:8080/share/page/user/admin/dashboard");
        });
   });
 });

@@ -1,12 +1,12 @@
 describe('angularjs homepage todo list', function() {
   it('should add a todo', function() {
-    browser.driver.get('http://192.168.96.20:8080/share/page/');
+    browser.driver.get('http://192.168.96.21:9090/share/page/');
     browser.driver.findElement(by.name('username')).sendKeys('admin');
 	browser.driver.findElement(by.name('password')).sendKeys('admin');
 	browser.driver.findElement(by.id('page_x002e_components_x002e_slingshot-login_x0023_default-submit-button')).click();
 
        browser.driver.getCurrentUrl().then(function(url) {
-          expect(url).toEqual("http://192.168.96.20:8080/share/page/user/admin/dashboard");
+          expect(url).toEqual("http://192.168.96.21:9090/share/page/user/admin/dashboard");
        });
   });
 });

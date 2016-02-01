@@ -1,12 +1,12 @@
 browser.ignoreSynchronization = true;
 describe('First use case', function() {
 	it('Login as Administrator', function() {
-		browser.driver.get('http://127.0.0.1:8080/share/page/');
+		browser.driver.get('http://127.0.0.1:9090/share/page/');
 		browser.driver.findElement(by.name('username')).sendKeys('admin');
 		browser.driver.findElement(by.name('password')).sendKeys('admin');
 		element(by.buttonText('Login')).click();
 		browser.driver.getCurrentUrl().then(function(url) {
-		  expect(url).toEqual("http://127.0.0.1:8080/share/page/user/admin/dashboard");
+		  expect(url).toEqual("http://127.0.0.1:9090/share/page/user/admin/dashboard");
 		});
 	});	
 		

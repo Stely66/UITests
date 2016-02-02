@@ -8,7 +8,7 @@ describe('First use case', function() {
 		browser.driver.getCurrentUrl().then(function(url) {
 		  expect(url).toEqual("http://127.0.0.1:9090/share/page/user/admin/dashboard");
 		});
-	});	
+	}, 100000);	
 		
 	it('Create a new user', function() {
 		browser.driver.findElement(by.id('HEADER_ADMIN_CONSOLE_text')).findElement(by.css('.alfresco-navigation-_HtmlAnchorMixin')).click();	
@@ -37,7 +37,7 @@ describe('First use case', function() {
 		browser.driver.wait(function() {
 			return browser.driver.isElementPresent(by.id('page_x002e_full-width-dashlet_x002e_user_x007e_admin_x007e_dashboard_x0023_default-createSite-button'));
 		}, 10000);
-	});	
+	}, 100000);	
 		
 	it('Create a new site', function() {
 		browser.driver.findElement(by.id('page_x002e_full-width-dashlet_x002e_user_x007e_admin_x007e_dashboard_x0023_default-createSite-button')).click();	
@@ -58,7 +58,7 @@ describe('First use case', function() {
 		browser.driver.isElementPresent(by.id('HEADER_SITE_DASHBOARD_text')).then(function(present){
 			expect(present).toBe(true);
 		});	
-	});	
+	}, 100000);	
 		
 	it('Upload a file', function() {
 		browser.driver.findElement(by.id('HEADER_SITE_DOCUMENTLIBRARY_text')).findElement(by.css('.alfresco-navigation-_HtmlAnchorMixin')).click();
@@ -78,7 +78,7 @@ describe('First use case', function() {
 		browser.driver.isElementPresent(by.id('template_x002e_web-preview_x002e_document-details_x0023_default-previewer-div')).then(function(present){
 			expect(present).toBe(true);
 		});	
-	});	
+	}, 100000);	
 	
 	it('Add site member', function() {
 		browser.driver.findElement(by.id('HEADER_SITE_MEMBERS_text')).findElement(by.css('.alfresco-navigation-_HtmlAnchorMixin')).click();
@@ -101,7 +101,7 @@ describe('First use case', function() {
 		browser.driver.findElement(by.id('actionsDiv1')).findElement(by.css('[type="button"]')).click();
 		element(by.linkText('Manager')).click();
 		browser.driver.findElement(by.id('template_x002e_invitationlist_x002e_invite_x0023_default-invite-button-button')).click();
-	});
+	}, 100000);
 	
 	it('Login as site member', function() {
 		browser.driver.findElement(by.id('HEADER_USER_MENU_POPUP_text')).click();
@@ -147,7 +147,7 @@ describe('First use case', function() {
 		browser.driver.isElementPresent(by.linkText ('Document1')).then(function(present){
 			expect(present).toBe(true);
 		});	
-	});
+	}, 100000);
 
 	//browser.driver.sleep(5000);
   
